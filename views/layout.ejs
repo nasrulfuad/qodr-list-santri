@@ -23,7 +23,7 @@
 	 -->
 
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="shortcut icon" href="/favicon.ico">
 
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700,900' rel='stylesheet' type='text/css'>
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
@@ -69,11 +69,28 @@
 				      			active
 				      		<% } %>
 						"><a href="/contact">Contact</a></li>
-						<li><a href="/social-media">Social Media</a></li>
 					</ul>
 				</nav>
 			</div>
 		</header>
+		<div class="container">
+			<ol class="breadcrumb">
+				<% breadcrumbs.forEach(breadcrumb => { %>
+				  <li class="<%= breadcrumb.active ? 'active' : '' %>">
+				  	<% if(breadcrumb.active) { %>
+				  		<%= breadcrumb.name %>
+				  	<% } else { %>
+					  	<a href="<%= breadcrumb.url %>"><%= breadcrumb.name %></a>				  		
+				  	<%} %>
+				  </li>
+				<% }) %>
+			</ol>
+			<% if (success_msg != '') { -%>
+				<p class="alert alert-success">
+					<%= success_msg %>
+				</p>
+			<% } -%>
+		</div>
 		<!-- END #fh5co-header -->
 		<%- body -%>
 		<!-- END .container-fluid -->
@@ -93,7 +110,7 @@
 			</div>
 		</footer>
 		<!-- END #fh5co-footer -->
-		
+
 	<!-- jQuery -->
 	<script src="/js/jquery.min.js"></script>
 	<!-- Bootstrap -->

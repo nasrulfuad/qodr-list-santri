@@ -1,0 +1,33 @@
+<div class="container">
+	<div class="panel panel-default">
+	  <div class="panel-heading">Insert new santri</div>
+	  <div class="panel-body">
+	  	<form action="/insert" method="post">
+			<div class="input-group input-group-sm mb3">
+			  <span class="input-group-addon" id="name">Name</span>
+			  <input type="text" class="form-control" placeholder="Full Name" name="name" aria-describedby="name">
+			</div>
+			<div class="input-group input-group-sm mb3">
+			  <span class="input-group-addon" id="email">Email</span>
+			  <input type="email" class="form-control" placeholder="Email" name="email" aria-describedby="email">
+			</div>
+			<div class="input-group input-group-sm mb3">
+			  <span class="input-group-addon" id="qualification">Qualification</span>
+			  <select name="qualification" style="width: 100%">
+			  	<option value="backend">Backend Developer</option>
+			  	<option value="frontend">Frontend Developer</option>
+			  	<option value="android">Android Developer</option>
+			  </select>
+			</div>
+			<div class="input-group input-group-sm mb3">
+			  <span class="input-group-addon" id="skills">Skills</span>
+			  <select name="skills" style="width: 100%" multiple="multiple">
+			  	<option value="nodejs">NodeJS</option>
+			  	<option value="php">PHP</option>
+			  </select>
+			</div>
+			<button type="submit" class="btn btn-primary btn-sm" style="width: 100%">Submit</button>
+	  	</form>
+	  </div>
+	</div>
+</div>

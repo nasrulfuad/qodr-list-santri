@@ -1,0 +1,23 @@
+		<div class="page-content shadow" style="padding: 30px; margin-bottom: 30px">
+			<h1 class="mb0"><%= santri.name %> <small><%= santri.age %> years old</small></h1>
+			<div class="meta">
+				<meta><%= santri.role %></meta>
+				,
+				<span><%= santri.substation %></span>
+			</div>
+			<p class="text-center">
+				<img src="/images/avatars/avatar-<%= santri.picture %>.png" alt="<%= santri.name %>">
+			</p>
+			<p><%= santri.about %></p>
+			<p>
+				You can contact <b><%= santri.name %></b> using this email address <a href="mailto:<%= santri.email %>"><%= santri.email %></a>
+				<br />
+				or on whatsapp <code><%= santri.phone %></code>
+			</p>
+			<p class="mb0">Skills :</p>
+			<ul class="square">
+				<% santri.skills.forEach(skill => { %>
+					<li><%= skill %></li>
+				<% }) %>
+			</ul>
+		</div>

@@ -277,6 +277,9 @@ figure {
   }
 }
 .shadow {
-  box-shadow: 0 1px 100px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 100px rgba(0, 0, 0, 0.1);
+}
+.mb3 {
+  margin-bottom: 20px;
 }
 /*# sourceMappingURL=style.css.map */

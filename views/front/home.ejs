@@ -2,10 +2,11 @@
 	<div id="fh5co-projects-feed" class="fh5co-projects-feed clearfix masonry">
 		<% students.forEach((student, i) => { %>
 			<div class="fh5co-project shadow masonry-brick">
-				<a href="/<%= student._id %>/show">
-					<img src="/images/avatars/avatar-<%= Math.ceil(Math.random() * 5) %>.png" style="width: 100%;" alt="<%= student.name %>">
+				<a href="/<%= student.id %>/show">
+					<img src="/images/avatars/avatar-<%= student.picture %>.png" style="width: 100%;" alt="<%= student.name %>">
 					<h2 style="margin-bottom: 10px;"><%= student.name %></h2>
-					<h2 style="font-size: 12px;"><%= student.eyeColor %></h2>
+					<p style="margin-bottom: 0"><%= student.substation %></p>
+					<p style="font-size: 12px;"><%= student.role %></p>
 				</a>
 			</div>
 		<% }) %>
