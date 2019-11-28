@@ -7,7 +7,6 @@ const expressLayouts = require('express-ejs-layouts');
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
 const PORT = process.env.PORT || 8080;
-const users = require('./data.json');
 
 // set the view engine to ejs
 app.use(expressLayouts);
@@ -33,10 +32,7 @@ app.use((req, res, next) => {
 
 app.use('/', require('./modules/home'));
 
-app.get('/api/users', function(req, res) {
-	// res.send('Hello Sapi');
-	res.json(users);
-});
+app.use('/api/santri', require('./apis/home'));
 
 app.listen(PORT, () =>
 	console.log(`Server is running on http://localhost:${PORT}`)
