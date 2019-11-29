@@ -1,23 +1,25 @@
 		<div class="page-content shadow" style="padding: 30px; margin-bottom: 30px">
-			<h1 class="mb0"><%= santri.name %> <small><%= santri.age %> years old</small></h1>
+			<h1 class="mb0"><%= student.nama %> <small><%= student.kota_asal %></small></h1>
 			<div class="meta">
-				<meta><%= santri.role %></meta>
+				<span class="capitalize">Backend Developer</span>
 				,
-				<span><%= santri.substation %></span>
+				<span class="uppercase"><%= student.cabang_sekarang %></span>
 			</div>
 			<p class="text-center">
-				<img src="/images/avatars/avatar-<%= santri.picture %>.png" alt="<%= santri.name %>">
+				<img src="/images/avatars/avatar-<%= student.foto ? student.foto : Math.ceil(Math.random() * 5) %>.png" alt="<%= student.nama %>">
 			</p>
-			<p><%= santri.about %></p>
+			<p><%= student.about %></p>
 			<p>
-				You can contact <b><%= santri.name %></b> using this email address <a href="mailto:<%= santri.email %>"><%= santri.email %></a>
+				You can contact <b><%= student.nama %></b> using this email address <a href="mailto:<%= student.email %>"><%= student.email %></a>
 				<br />
-				or on whatsapp <code><%= santri.phone %></code>
+				or on whatsapp <code><%= student.no_telp %></code>
 			</p>
 			<p class="mb0">Skills :</p>
 			<ul class="square">
-				<% santri.skills.forEach(skill => { %>
-					<li><%= skill %></li>
-				<% }) %>
+				<li>Node JS</li>
+				<li>Javascript</li>
+				<li>PHP</li>
+				<li>Laravel</li>
+				<li>Bootstrap</li>
 			</ul>
 		</div>
