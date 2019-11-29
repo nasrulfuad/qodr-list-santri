@@ -62,7 +62,6 @@ module.exports = {
 			getToken,
 			`SELECT uid, foto, nama, cabang_sekarang, panggilan, kota_asal, no_telp, nama_ortu, alamat, email, status_santri, fb FROM santri WHERE uid='${req.params.id}'`
 		);
-		console.log(student);
 		const breadcrumbs = [
 			{ name: 'Home', url: '/', active: false },
 			{ name: 'Details', url: '#', active: true },

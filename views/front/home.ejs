@@ -4,7 +4,7 @@
 			<div class="fh5co-project shadow masonry-brick">
 				<a href="/<%= student.uid %>/show">
 					<img src="/images/avatars/avatar-<%= student.foto ? student.foto : Math.ceil(Math.random() * 5) %>.png" style="width: 100%;" alt="<%= student.nama %>">
-					<h2 style="margin-bottom: 10px;"><%= student.nama %></h2>
+					<h2 style="margin-bottom: 10px;" class="capitalize"><%= student.nama %></h2>
 					<p style="margin-bottom: 0; text-transform: uppercase;"><%= student.cabang_sekarang ? student.cabang_sekarang : '-' %></p>
 					<p style="font-size: 12px;" class="capitalize"><%= student.status_santri %></p>
 				</a>

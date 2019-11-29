@@ -1,5 +1,5 @@
 		<div class="page-content shadow" style="padding: 30px; margin-bottom: 30px">
-			<h1 class="mb0"><%= student.nama %> <small><%= student.kota_asal %></small></h1>
+			<h1 class="mb0 capitalize"><%= student.nama %> <small><%= student.kota_asal %></small></h1>
 			<div class="meta">
 				<span class="capitalize">Backend Developer</span>
 				,
@@ -10,10 +10,34 @@
 			</p>
 			<p><%= student.about %></p>
 			<p>
-				You can contact <b><%= student.nama %></b> using this email address <a href="mailto:<%= student.email %>"><%= student.email %></a>
+				You can contact <b class="capitalize"><%= student.nama %></b> using this email address <a href="mailto:<%= student.email %>"><%= student.email %></a>
 				<br />
 				or on whatsapp <code><%= student.no_telp %></code>
 			</p>
+			  <table class="table">
+			    <tbody>
+			    	<tr>
+			    		<th>Nama</th>
+			    		<td class="capitalize"><%= student.nama %></td>
+			    	</tr>
+			    	<tr>
+			    		<th>Email</th>
+			    		<td><%= student.email %></td>
+			    	</tr>
+			    	<tr>
+			    		<th>Status</th>
+			    		<td class="capitalize"><%= student.status_santri %></td>
+			    	</tr>
+			    	<tr>
+			    		<th>Alamat</th>
+			    		<td class="capitalize"><%= student.alamat %></td>
+			    	</tr>
+			    	<tr>
+			    		<th>No Telp</th>
+			    		<td><%= student.no_telp %></td>
+			    	</tr>
+			    </tbody>
+			  </table>
 			<p class="mb0">Skills :</p>
 			<ul class="square">
 				<li>Node JS</li>

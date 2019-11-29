@@ -1,6 +1,24 @@
+body {
+	position: relative;
+	padding-bottom: 30px;
+}
 .capitalize {
 	text-transform: capitalize;
 }
 .uppercase {
 	text-transform: uppercase;
+}
+.table tbody tr:hover {
+	background: #eee;
+	cursor: pointer;
+}
+.table tbody th {
+	font-size: 12px;
+}
+.table tbody td {
+	font-size: 12px;
+}
+.my-footer {
+	position: absolute;
+	bottom: 0;
 }
