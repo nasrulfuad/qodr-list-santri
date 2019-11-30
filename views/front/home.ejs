@@ -1,0 +1,35 @@
+<header class="header header-nav" role="banner">
+<div class="container text-center">
+	<nav>
+		<ul>
+			<li class="<%= filterNav == 'all' ? 'active' : '' %>"><a href="?filter=all">All</a></li>
+			<li class="<%= filterNav == 'santri' ? 'active' : '' %>"><a href="?filter=santri">Santri</a></li>
+			<li class="<%= filterNav == 'alumni' ? 'active' : '' %>"><a href="?filter=alumni">Alumni</a></li>
+		  <li role="presentation" id="dropdown-cabang" class="dropdown <%= filterNav.id == 'cabang' ? 'active' : '' %>">
+		    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+		      Cabang <span class="caret"></span>
+		    </a>
+		    <ul class="dropdown-menu">
+		    	<% cabang.forEach((val) => { %>
+			      <li class="<%= filterNav.nama == val.id ? 'coret' : '' %>" ><a href="?filter=cabang&nama_cabang=<%= val.id %>"><%= val.nama %></a></li>
+		    	<% }) %>
+		    </ul>
+		  </li>
+		</ul>
+	</nav>
+</div>
+</header>
+<div class="container-fluid pb70">
+	<div id="fh5co-projects-feed" class="fh5co-projects-feed clearfix masonry">
+		<% students.forEach((student, i) => { %>
+			<div class="fh5co-project shadow masonry-brick">
+				<a href="/<%= student.uid %>/show">
+					<img src="/images/avatars/avatar-<%= student.foto ? student.foto : Math.ceil(Math.random() * 5) %>.png" style="width: 100%;" alt="<%= student.nama %>">
+					<h2 style="margin-bottom: 10px;" class="capitalize"><%= student.nama %></h2>
+					<p style="margin-bottom: 0; text-transform: uppercase;"><%= student.cabang_sekarang ? student.cabang_sekarang : '-' %></p>
+					<p style="font-size: 12px;" class="capitalize"><%= student.status_santri %></p>
+				</a>
+			</div>
+		<% }) %>
+	</div>
+</div>
